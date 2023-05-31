@@ -1,0 +1,840 @@
+* {
+  /*The universal selector (*) selects all HTML elements on the page. */
+  margin: 0;
+  /*taki all diraction me ko space na rahe */
+  padding: 0;
+  font-family: "Poppins", "sans-sarif";
+  box-sizing: border-box;
+  /*padding and border ka effect nahi hoga jitni width diya hai humene only bahi rahegi usme padding border add nahi hoga as a full width  */
+}
+/*..................................................................... Root Section....................................................... */
+html {
+  scroll-behavior: smooth;
+}
+/*...................................................................... Body Section .......................................................*/
+body {
+  background-color: rgba(191, 174, 206, 0.644);
+  color: #fff;
+}
+/*......................................................................Header Section....................................................... */
+.head {
+  background: #5cb760;
+  width: 100%;
+}
+#head p,
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.head:hover {
+  background-color: #f988ae;
+  color: #707fb8;
+}
+#info {
+  color: #262626;
+}
+#head a {
+  text-decoration: none;
+  color: blue;
+  font-size: 20px;
+}
+/*................................................................... Navbar Section ...............................................*/
+#header {
+  width: 458px;
+  height: 100vh;
+  /* 1vw is 1% of the viewport width. */
+  /* ise na liken to image repert ho rahi secreen per */
+  background-position: center;
+  margin-left: 0;
+}
+.container {
+  padding: 10px 30px;
+  /* 10px top bottom 10% left right */
+}
+nav {
+  display: flex;
+  /*taki logo and link side by side aasaken */
+  align-items: center;
+  /*/*|vercilly aling center Tip: Use the align-items property to align the items vertically.||The align-items property specifies the default alignment for items inside a flexbox or grid container. */
+  justify-content: space-between;
+  /*//space-between	Items will have space between them */
+  flex-wrap: wrap;
+  /* The flex-wrap property specifies whether the flexible items should wrap or not. */
+  /* Note: If the elements are not flexible items, the flex-wrap property has no effect. */
+}
+.LOGO {
+  width: 140px;
+}
+.LOGO:hover {
+  cursor: pointer;
+}
+nav ul li {
+  display: inline-block;
+  /* ||horizontally lana chaharhe menu bar ko One common use for display: inline-block is to display list items horizontally instead of vertically. The following example creates horizontal navigation links: */
+  list-style: none;
+  /*cirlle hat jate hai  */
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #d54e1d;
+  text-decoration: none;
+  /*remove underline */
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a:hover {
+  color: #073cfc;
+  background: #fff;
+
+}
+nav ul li a::after {
+  /* :: se like jate hai inhe "pseduo elmenet" kate hai jo(::after,::before) : se like  jate hai unhe "psedo classes" kahte hia (:active,:hover)Use the ::after selector to insert something after the content. */
+  content: "";
+  width: 0;
+  /*width 100% property lagana hi to work karne  ge ::after secelector 0 kar den to hidden  hojaegi hum chaha rahe jab hover karen to show ho*/
+  height: 3px;
+  background-color: #ff004f;
+  position: absolute;
+  /* HTML elements are positioned static by default. */
+  /* Static positioned elements are not affected by the top, bottom, left, and right properties. */
+  /* An element with position: static; is not positioned in any special way; it is always positioned according to the normal flow of the page: */
+  left: 0;
+  /* An element with position: relative;  */
+  /* is positioned relative to its normal position. */
+  /* Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element. */
+  /* /////////////// */
+  /* An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. */
+  /* An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed). */
+  /* However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling. */
+  /* Note: Absolute positioned elements are removed from the normal flow, and can overlap elements./ */
+  /* ///// */
+  /* An element with position: sticky; is positioned based on the user's scroll position. */
+  /*A sticky element toggles between relative and fixed, depending on the scroll position */
+  bottom: -6px;
+  /* taki niche aasake  */
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+#menu-bar {
+  background-color: rgba(235, 231, 231, 0.44);
+  width: 100%;
+  text-align: center;
+}
+#menu-bar ul li {
+  display: inline-block;
+  padding: 15px 10px;
+  font-size: 18px;
+  color: #f2e8e8;
+  font-weight: bold;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  margin-left: 0;
+  background: rgb(86, 232, 243, .76);
+}
+/* ...............................................................Home Section.................................................... */
+#home {
+  padding: 80px 0;
+  color: #130f0f;
+}
+.row1 {
+  /* flex-basis: 35%; */
+  /* The flex-basis property specifies the initial length of a flexible item. */
+  /* Note: If the element is not a flexible item, the flex-basis property has no effect. */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  /*make responsive website  wrap acc to screen size */
+}
+.col {
+  /* width: 20%; */
+  box-sizing: border-box;
+}
+.col1 {
+  flex-basis: 35%;
+}
+.col2 {
+  flex-basis: 60%;
+}
+.col2.header-text {
+  margin-top: 1rem;
+}
+.col img {
+  height: 67vh;
+  width: 25vw;
+  /* border: 2px solid black; */
+  box-shadow: 0 0 1rem rgb(232, 231, 233);
+  margin-left: 50px;
+  margin-top: 6rem;
+}
+.col img:hover {
+  box-shadow: 0 0 1rem rgb(161, 163, 162);
+}
+.header-text {
+  margin: 1rem;
+  font-size: 2rem;
+  margin-top: 7rem;
+}
+.btn1 {
+  margin-top: 30px;
+  font-size: 20px;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4rem;
+  box-shadow: rgb(62, 30, 243) 0px 0px 1rem;
+  width: 170px;
+  margin-left: 5rem;
+}
+.social-media a {
+  display: inline-flex;
+  /* Inline-flex: Displays an element as an inline-level flex container. The display:inline-flex does not make flex items display inline. It makes the flex container display inline. The main difference between display: flex and display: inline-flex is that display: inline-flex will make the flex container an inline element */
+  /* There is only one main difference between the inline-block and inline-flex:  */
+  /* inline-block: Create specific block for each element under its section maintain the structure of each element.  */
+  /* inline-flex: Does not reserved any specific space in normal form. */
+  justify-content: center;
+  align-items: center;
+  width: 1.5vw;
+  height: 5vh;
+  /* background: transparent; */
+  /* border: 1px solid rgb(57, 23, 251); */
+  border-radius: 50%;
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  /* background-color: #fd3c7c; */
+  color: #2754f7;
+  text-decoration: none;
+  margin-left: 5rem;
+}
+.btn1:hover {
+  box-shadow: 0 0 1rem rgb(255, 59, 72);
+}
+.btn1 a {
+  text-decoration: none;
+  /* margin-left: 8px; */
+}
+.btn1 a:hover {
+  color: #0a0b0a;
+}
+.social-media a:hover {
+  color: #f94a4a;
+}
+/*but boxsizing :content box karne per width me padding and border bhi add hiojata to full width bad jati hai */
+.header-text p {
+
+  /* the rem unit is only relative to the document's root element, while the em unit is only relative to the immediate parent of the targeted element */
+  /* 1rem = 16px */
+  /* Use px for small, fixed-size elements like borders or shadows. */
+  /* Use em for typography and other scalable elements that need to change size relative to their parent element. */
+  /* Use rem for scalable typography and "responsive layouts" that need to change size relative to the root element. */
+  font-weight: 100;
+  font-size: 1.4rem;
+  width: 23rem;
+  height: 20vh;
+  margin-left: 5rem;
+}
+.header-text h2 {
+  font-weight: bold;
+  font-size: 3.9rem;
+  margin-left: 5rem;
+}
+.header-text h3 {
+  font-weight: 20rem;
+  font-size: 2.1rem;
+  margin-left: 5rem;
+}
+.header-text h1 {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.header-text h3 span {
+  color: #ff004f;
+  font-size: 3.0rem;
+  font-weight: bold;
+}
+/* .................................................................About  Section...................................................*/
+#about {
+  padding: 80px 0;
+  color: #ffffff;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*make responsive website  wrap acc to screen size */
+}
+.about-col-1 {
+  flex-basis: 35%;
+  /* The flex-basis property specifies the initial length of a flexible item. */
+  /* Note: If the element is not a flexible item, the flex-basis property has no effect. */
+  margin-top: -138px;
+}
+.about-col-1 img {
+  width: 18vw;
+  height: 52vh;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: rgba(253, 8, 90, 0.96) 0px 0px 1rem;
+}
+.about-col-1 img:hover {
+  box-shadow: 0 0 1rem rgba(55, 19, 236, 0.99);
+}
+.about-col-2 {
+
+  flex-basis: 60%;
+  margin-top: -80px;
+  font-size: 20px;
+}
+.about-col-2 h1 span {
+  color: #262626;
+}
+.about-col-2 p,
+h1 {
+  color: #0c0707;
+}
+.sub-titile {
+  font-size: 35px;
+  font-weight: 600;
+  color: #100707;
+}
+.tab-titile {
+  display: flex;
+  margin: 20px 0 40px;
+  /*top 20px left right 0 and 40px bottom  */
+}
+.tab-titile p {
+  color: #262626;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+/* we want to clik any of link then visible link underline below  */
+.tab-links::after {
+  /*/eh underline ke liye likh rahe */
+  content: "";
+  width: 0;
+  /*engha zero kiy taki hide ho jae undeline every one per or jise clike kaen hum niche hover karen to sho ho */
+  height: 4px;
+  /*height of underline */
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  /*- value diya so that underline niche aasake */
+  transition: width 0.5s;
+  /*to create a transistion effect you must specify 2 thing 1. css propertity 2.duration f effect if duration is not specify transidtion no effect because defaluet value is 0  */
+}
+/*/width nalikhen to bhi chalega kunki with ooper 0 kar diya */
+.tab-links.active-link::after {
+  width: 50%;
+  /*active per default set kar diya tarnsistion */
+}
+.tab-content ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-content ul li span {
+  color: #491e2c;
+  font-size: 14px;
+}
+.tab-content {
+  display: none;
+  /*contain ko hide kadiya and below deglaut skills  bale per laga diya */
+}
+.tab-content.active-tab {
+  /*.tab-cotent na  likhen to bhi chalega */
+  display: block;
+  /*so that contain can we visible */
+}
+/* diplay:inlene display an elemnt as a inline elment eg. span height width not effect 
+  diplay:block; display an elemnt as a block elment 
+  diplay:flex; display an elemnt as a block  level flex  container
+  diplay:inlene block; display an elemnt as a inlen-level block  container 
+  diplay:none elm completly remove;  */
+/*..................................................................Services Section................................................... */
+#services {
+  padding: 30px 0p;
+}
+#services h1 {
+  color: #262626;
+}
+.serveces-list {
+  /*The CSS Grid Layout Module offers a grid-based layout system, with rows and columns, making it easier to design web pages without having to use floats and positioning. */
+  /* grid	A shorthand property for the grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and the grid-auto-flow properties */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /*grid layout coloum per  */
+  grid-gap: 40px;
+  /*   auto fit pane aap colum me fit hojaega  */
+  margin-top: 50px;
+}
+.serveces-list div {
+  background: #262626;
+  padding: 30px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  width: 350px;
+  /* The transition-timing-function property specifies the speed curve of the transition effect.
+The transition-timing-function property can have the following values:
+ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)
+linear - specifies a transition effect with the same speed from start to end
+ease-in - specifies a transition effect with a slow start
+ease-out - specifies a transition effect with a slow end
+ease-in-out - specifies a transition effect with a slow start and end */
+  transition: background 0.5s, transform 0.5s;
+}
+.serveces-list div i {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.serveces-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.serveces-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.serveces-list div:hover {
+  background: #ff004f;
+  /* transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements. */
+  transform: translateY(-10px);
+  /*translateY(y)	Defines a translation, using only the value for the Y-axis	 */
+}
+/* 
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  /*The CSS overflow property controls what happens to content that is too big to fit into an area. */
+/* visible - Default. The overflow is not clipped. The content renders outside the element's box
+  hidden - The overflow is clipped, and the rest of the content will be invisible
+  scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+  auto - Similar to scroll, but it adds scrollbars only when necessary
+  Note: The overflow property only works for block elements with a specified height. */
+/* overflow-x: hidden;  Hide horizontal scrollbar 
+  overflow-y: scroll; Add vertical scrollbar 
+  
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+   transition: transform 0.5s; /*kis speed se apply karna hai effect transition batata hai kya karna hai rotate ,scale  eh transformation batata ,kitna bada kanra hia ehn hover se set karte hai */
+/* CSS transitions allows you to change property values smoothly, over a given duration.  */
+/* ..................................................................Portfolio Section ............................................................. */
+.layer {
+  width: 100%;
+  height: 0;
+  /*niche hum isver hover effcet llagana charharahe  */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  /*The linear-gradient() function sets a linear gradient as the background image.
+  To create a linear gradient you must define at least two color stops. Color stops are the colors you want to render smooth transitions among. You can also set a starting point and a direction (or an angle) along with the gradient effect. */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /*contant ko oper lane ke liye */
+  overflow: hidden;
+  display: flex;
+  /*layer container ko center me lane ke leye  */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.9s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+#portfolio h1 {
+  color: #262626;
+}
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  /*The text-decoration property specifies the decoration added to text, and is a shorthand property for:
+text-decoration-line (required)
+text-decoration-color||text-decoration-line	Sets the kind of text decoration to use (like underline, overline, line-through)
+text-decoration-style||text-decoration-style	Sets the style of the text decoration (like solid, wavy, dotted, dashed, double)
+text-decoration-thickness 8*/
+  font-size: 15px;
+  line-height: 40px;
+  /*icon ko verticaly cente me lane ke liye */
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /*icon ko circle bane ke liye 8*/
+  text-align: center;
+}
+.work {
+  margin: 30px;
+  width: 250px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /*grid layout coloum per  */
+  /*   auto fit pane aap colum me fit hojaega  */
+  margin-top: 50px;
+}
+.work img {
+  width: 250px;
+  border-radius: 15px;
+  height: 170px;
+}
+.work .name {
+  color: #fff;
+  background-color: red;
+  height: 30px;
+  box-shadow: 0 0 1rem rgba(3, 249, 32, 0.99);
+  border: 2px solid black;
+  text-align: center;
+}
+.work:hover {
+  /*image per hover effect 1.1 scale se trige ho */
+  transform: scale(1.1);
+  /*The transform property applies a 2D or 3D transformation to an element. This property allows you to rotate, scale, move, skew, etc., elements.*/
+}
+.work:hover .layer {
+  /*hover kane se imge ke css propertity apply ho saken */
+  height: 100%;
+}
+.work-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3px 0;
+  /* height:170px; */
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  /*center me lane ke liye buton ko */
+  width: fit-content;
+  /*content jitna hia bah button usi ke hisab se fit rahe  and center me aagae*/
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  color: #4d4949;
+  text-decoration: none;
+  /*undrline ko remove karne ke liye*/
+  transition: background 0.5s;
+  background-color: #a1cde2;
+}
+.btn:hover {
+  background: #ff004f;
+  /*/button ka  color as well as duration change kiya    */
+}
+/*................................................................. Contact Section........................................................*/
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left h1 {
+  color: #262626;
+}
+.contact-left p {
+  color: #575656;
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #fd3c7c;
+  margin-right: 15px;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #fff;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+  /*icon move kar saken */
+}
+form button {
+  display: inline-block;
+}
+.contact-right form {
+  width: 100%;
+  background-color: #7a7b7c;
+  border-radius: 15px;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  /*An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out" */
+  padding: 15px;
+  /* background: #262626;Note: Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline. */
+  margin: 10px 0;
+  font-size: 18px;
+  box-shadow: 0 1px 15px rgb(50, 52, 51);
+  border-radius: 6px;
+}
+form input:hover{
+  box-shadow: 0 1px 15px rgb(157, 160, 159);
+background-color: #ada9a9;
+color: #fff;
+}
+form textarea:hover {
+  background-color: #aca9a9;
+color: #fff;
+  box-shadow: 0 1px 15px rgb(128, 132, 130);
+  
+}
+form .btn {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #a1cde2;
+}
+/*........................................................ Footer Section........................................ */
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #887575;
+  font-weight: 300;
+  margin-top: 20px;
+  height: 65px;
+}
+.copyright i {
+  color: #ff004f;
+  font-size: 20px;
+  cursor: pointer;
+}
+#copy {
+  color: #fff;
+  font-size: 13px;
+}
+nav .fa-solid {
+  display: none;
+}
+/* ..............................................Css for small screen means responsive............................. */
+@media only screen and (max-width :768px) {
+  /*........................................................ Header section ..........................................*/
+  #header {
+    background-image: url(img/sim\ \(2\).png);
+  }
+  /*......................................................... Navbar section.................................... */
+  #menu-bar {
+    height: 40px;
+  }
+  nav .fa-solid {
+    display: block;
+    /*show ho sake menu */
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  #sidemenu.fa-bars {
+    margin-right: 10px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    /*//by default hum side bar ko hide rakhen ge  to widht ki bar rihgt ki vlue negative kar di*/
+    width: 200px;
+    height: 100vh;
+    z-index: 2;
+    /* The z-index property specifies the stack order of an element. */
+    /* An element with greater stack order is always in front of an element with a lower stack order. */
+    /* Note:koi content side navar ki uper na aae behind  the navbar rahe to value +vie | z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display:flex elements) */
+    padding-top: 15px;
+    transition: right 0.5s;
+    /*0.5s  se deley ho kar opnen ho navbar and close ho means smoothley */
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul li a {
+    color: white;
+    /* background-color: #262626; */
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 12px;
+    left: 24px;
+    cursor: pointer;
+  }
+  /*.......................................................... Home section....................................... */
+  .col img {
+    height: 44vh;
+    width: 81vw;
+    box-shadow: 0 0 1rem rgb(62, 30, 243);
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  .col img:hover {
+    box-shadow: 0 0 1rem rgb(48, 245, 94);
+  }
+  #colum-2 {
+    margin-left: 2rem;
+  }
+  .header-text {
+    margin-left: 0;
+
+    width: 50vw;
+  }
+  .header-text h3 span {
+    font-size: 2.13rem;
+  }
+  .header-text h3 {
+    font-size: 1.4rem;
+    margin-left: 0;
+  }
+  .header-text h2 {
+    font-size: 2.3rem;
+    margin-left: 0;
+  }
+  .header-text h1 {
+    font-size: 1rem;
+    margin-left: 0;
+  }
+  .header-text p {
+    font-size: 1.2rem;
+    width: 17rem;
+    height: 9vh;
+    margin-left: 0;
+  }
+  .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5vw;
+    height: 3vh;
+    /* background: transparent; */
+    /* border: 1px solid rgb(57, 23, 251); */
+    border-radius: 50%;
+    font-size: 2.rem;
+    margin-top: 3.5rem;
+    /* background-color: #fd3c7c; */
+    color: #2754f7;
+    text-decoration: none;
+    margin-left: 2rem;
+  }
+  .btn1 {
+    margin-top: 22px;
+    font-size: 19px;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4rem;
+    box-shadow: rgb(62, 30, 243) 0px 0px 1rem;
+    width: 162px;
+    margin-left: 1rem;
+  }
+  /* ...............................................................About Section............................................ */
+  .sub-titiles {
+    font-size: 35px;
+  }
+  .tab-titile .tab-links {
+    padding: 5px;
+  }
+  .about-col-1,
+  .about-col-2 {
+  flex-basis: 100%;
+    /* The flex-basis property specifies the initial length of a flexible item. */
+    /* Note: If the element is not a flexible item, the flex-basis property has no effect. */
+  }
+  .about-col-2 #para {
+    margin-top: 50px;
+  }
+  #about {
+    margin-top: 146px;
+  }
+  .tab-titile {
+    margin: 0px;
+    width: 20vw;
+  }
+  .about-col-1 {
+    margin-bottom: 35px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .about-col-2 p {
+    width: 62vw;
+  }
+  .tab-links {
+    font-size: 20px;
+    margin-right: 30px;
+  }
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+  .about-col-1 img {
+    width: 51vw;
+    height: 23vh;
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: rgba(253, 8, 90, 0.96) 0px 0px 1rem;
+  }
+  /*.................... ...........................................My Services Section ...........................................*/
+  .serveces-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 85vw;
+  }
+  .serveces-list div {
+    padding: 1rem;
+    height: 30vh;
+  }
+ /* ...................................................................Footer Section.............................................................. */
+  .copyright {
+    font-size: 14px;
+  }
+  #msg {
+    color: #31ca07;
+    margin-top: -40px;
+    /*top se sapce remove karne ke liye */
+    display: block;
+    font-size: 20px;
+  }
+}

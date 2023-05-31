@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohd Irshad</title>
+  <link rel="stylesheet" href="style.css" />
+  <!--......... font awasome CDN link......... -->
+  <script src="https://kit.fontawesome.com/c9d8b72996.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!--...............................................Header Section.............................................. -->
+  <div class="head">
+    <header id="head">
+      <h2><span id="info">Name:</span>Mohd Irshad</h2>
+      <p><span id="info">College Name:</span>NIT Agartala</p>
+      <p><span id="info">Stream: </span>Master Of Computer Application(MCA)</p>
+      <p><span id="info">Phone No:</span>9897223581</p>
+      <p><span id="info">Email:</span>moirshad588@gmail.com</p>
+      <p><span id="info">linkedin:</span><a href="https://www.linkedin.com/in/mohd-irshad-6b786424b">Linkedin</a></p>
+      <p><span id="info">Summary:</span>
+        { Hi,I am Mohd Irshad.I am 23 year . I am from pilibhit (UP).
+        Currentlly I am pursuing MCA form NIT Agartala.
+        }
+      </p>
+    </header>
+  </div>
+  <!--...................................................... Navbar section................................................... -->
+  <div class="header">
+    <nav id="menu-bar">
+      <div>
+        <img src="img/LOGO.png" class="LOGO" />
+      </div>
+      <div>
+        <ul id="sidemenu">
+          <li><a href="#header" title="home">Home</a></li>
+          <li><a href="#about" title="about">About</a></li>
+          <li><a href="#services" title="services">Services</a></li>
+          <li><a href="#portfolio" title="portfolio">Portfolio</a></li>
+          <li><a href="#contact" title="contct">Contact</a></li>
+          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </div>
+    </nav>
+  </div>
+  <!-- ...............................................Home section..................................................... -->
+  <div id="home">
+    <div class="cont ">
+      <div class="row1">
+        <div class="col col1" id="colum-1">
+          <img src="img/background.jpg" alt="bodyimg" />
+        </div>
+        <div class="col col2" id="colum-2">
+          <div class="header-text">
+            <h3>Hello,my name is</h3>
+            <h2>Mohd Irshad</h2>
+            <h3>And I'm a <span class="front"> </span></h3>
+            <p>
+              { Hi,I am Mohd Irshad.I am 23 year . I am from pilibhit (UP).
+              Currentlly I am pursuing MCA form NIT Agartala. My Contact No.
+              9897223581. }
+            </p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/profile.php?id=100046122160070"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/mohd-irshad-6b786424b"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/moirshad588/"><i class="fa-brands fa-square-instagram"></i></a>
+            </div>
+            <div class="btn1">
+              <a href="img/myFinalResume.pdf" class="">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .............................About section .................................-->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <h1 class="sub-titile"><span>About Me</span></h1>
+          <img src="img/myimgae.png" alt="" />
+        </div>
+        <div class="about-col-2">
+          <div id="para">
+            <h1>Summary:</h1>
+            <p>
+              Hello,My name is Mohd Irshad.I am 23 year. I am from pilibhit (UP).
+              I did my gradution in B.Sc form MJP Rohilkhand University Bareilly.And
+              currently i am pursuing MCA form NIT Agartala. My Contact No.
+              9897223581, and Emial moirshad588@gmail.com.
+            </p>
+          </div>
+          <div class="tab-titile">
+            <p title="Skills" class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p title="Experiences" class="tab-links" onclick="opentab('experience')">
+              Work Experiences
+            </p>
+            <p title="Eduction" class="tab-links" onclick="opentab('eduction')">Education</p>
+          </div>
+          <!-- Skills contains -->
+          <div class="tab-content active-tab" id="skills">
+            <ul>
+              <li><span> Technical Skills</span></li>
+              <li>HTML, CSS<br>Javascript, ReactJS, ES6</li>
+              <li><br />C, C++, STL, DSA, OPPS, Problem Solving</li>
+            </ul>
+          </div>
+          <!-- Experiences  contians-->
+          <div class="tab-content" id="experience">
+            <ul>
+              <li>
+                <span>Frontend Development</span><br />In 2ed sem. in my college i am making many projects <br>
+                using HTML ,CSS ,JS ,ReactJS.
+              </li>
+              <li><span>Agust-2022</span><br />I am doing my c/c++ Programming languages</li>
+            </ul>
+          </div>
+          <!-- Eduction  contains-->
+          <div class="tab-content" id="eduction">
+            <ul>
+              <li><span>Present</span><br />I am doing my MCA form NIT Agartala.</li>
+              <li><span>2018-2021</span><br />I had completed my B.Sc form MJP Rokilkhand University.</li>
+              <li><span>2017-2018</span><br />I had done my 12th form Kumar Jhankar Singh IC College Barsia.</li>
+              <li><span>2015-2016</span><br />I had done my 10th from Azad HSS School Mirpur Bhanpur(pilibhit).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ...............................................Services section........................................... -->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-titile">MY Services</h1>
+      <div class="serveces-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Frontend Developer</h2>
+          <p>
+            Hi,I am a Frontend Developer.
+            And i can design beautiful website.
+            Please, give me one chance.
+          </p>
+        </div>
+        <div>
+          <i class="fa-solid fa-crop-simple"></i>
+          <h2>Technical Skills</h2>
+          <p>
+            Also i know about c/c++ And HTML ,CSS, JAVASCRIPT, REACTJS .
+          </p>
+        </div>
+        <div>
+          <i class="fa-sharp fa-solid fa-person-chalkboard"></i>
+          <p>
+            I am good mentor .I am providing mentorship for students.
+            I am also dealing my project team in my class 10th.In this project i am making
+            real time SO2 gass sucessfully.And geting a prize form my school principal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .............................................Projects section...........................................-->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="sub-title">My Projects</h1>
+      <div class="work-list">
+        <div class="work" id="w1">
+          <img src="img/ck.png" alt="" />
+          <p class="name">Analog Clock</p>
+          <div class="layer">
+            <h3>Analog Clock.</h3>
+            <p>
+              This is pretty Analog Clock.
+              Also look nice.
+            </p>
+            <a href="https://irshad9881.github.io/AnalogClock.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work" id="w2">
+          <img src="img/portfolio.png" alt="" />
+          <p class="name">Portfolio Website</p>
+          <div class="layer">
+            <h3>MY personal Portfolio.</h3>
+            <p>
+              This is my personal Portfolio.
+              I am creating usning Html,Css and Javasctipt.
+            </p>
+            <a href="https://irshad9881.github.io/IsmiIrshadPortfolio.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work" id="w3">
+          <img src="img/quiz.png" alt="" />
+          <p class="name">Quiz App</p>
+          <div class="layer">
+            <h3>Qizz.</h3>
+            <p>
+              In this app there are four option.
+              Whenever we choosing one it will show result.
+            </p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="work" id="w4">
+          <img src="img/weater.png" alt="" />
+          <p class="name">Weather App</p>
+          <div class="layer">
+            <h3>Weather App</h3>
+            <p>
+              THis is show information related weater
+              like temrature ,AIQ etc.
+            </p>
+            <a href="https://irshad9881.github.io/myweather.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .....................................contact secition................................ -->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title deco">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>moirshad588@gmail.com</p>
+          <p><i class="fa-solid fa-square-phone"></i>9897223581</p>
+          <div class="social-icons">
+            <a href=" https://www.linkedin.com/in/mohd-irshad-6b786424b"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100046122160070"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/moirshad588/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/irshad9881"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <a href="img/myFinalResume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+            <!--name vlaue same raka contact form scrpit bellow -->
+            <input type="text" name="Name" placeholder="Your Name" required />
+            <input type="email" name="Email" placeholder="Your Email" required />
+            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+            <button type="submit" class="btn">Submit</button>
+          </form>
+          <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright">
+      <p>
+        copyright
+        <i class="fa-sharp fa-regular fa-copyright" id="copy"></i>Irshad.Made
+        it with <i class="fa-solid fa-heart" id="heart"></i> in 2023.
+      </p>
+    </footer>
+  </div>
+  <!-- ................................Javascript seciton .............................-->
+  <script>
+    var tablink = document.getElementsByClassName("tab-links");
+    var tabcontent = document.getElementsByClassName("tab-content");
+    function opentab(tabnae) {
+      for (tabl of tablink) {
+        tabl.classList.remove("active-link"); //underline ko remove kisi link per clik karen underline remove hojaegi kunki same link id ko per onlick fub lagya
+      }
+      for (tabc of tabcontent) {
+        //classList ropertites returns the css classnames of an elements of an element it is read only but you can use the methods listed below to add remove css classes form the list
+        tabc.classList.remove("active-tab"); //content ko reomove ker dega
+      } //Events :when js is used in hmtl pages js can rect on these events //currenttaget propertiy return the elment whose event listner triggeeded the event it is read only property
+      event.currentTarget.classList.add("active-link"); //add unerline whatever we click
+      document.getElementById(tabnae).classList.add("active-tab"); //add conternt whatever we click
+    }
+  </script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openMenu() {
+      sidemenu.style.right = "0";
+    }
+    function closeMenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+  <!-- ......................script for contct form........................ -->
+  <script>
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbx0elJD6dp3iDLSr7DiqM-KrqGfPCRJVFM0cNYEK1kT3kmYLE4GZza8OLgyddhD73ZKRw/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const msg = document.getElementById("msg"); //eh humen define kiya
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          msg.innerHTML = "Message sent sucessfully"; //eh hamne define kiya or en continusly show hoga to 5sec ke bad remove kade is li setTimeOut fun
+          setTimeout(function () {
+            msg.innerHTML = "";
+          }, 5000); 
+          form.reset(); 
+        })
+        .catch((error) => console.error("Error!", error.message));
+    });
+  </script>
+  <!-- ........................improt form typed.js...................-->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script>
+    const typed = new Typed(".front", {
+      strings: ["Frontend Developer"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 300,
+      loop: true,
+    });
+  </script>
+  <!-- ..........................external js file .....................-->
+  <script src="script.js"></script>
+</body>
+
+</html>
